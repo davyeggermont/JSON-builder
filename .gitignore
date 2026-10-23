@@ -1,0 +1,20 @@
+# Office lock/temp files (created while Cursussen.xlsx is open in Excel)
+~$*
+*.tmp
+
+# JSON downloaded from the tool into the project root (example/Cursussen.json stays tracked)
+/Cursussen.json
+/Cursussen (*).json
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
