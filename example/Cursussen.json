@@ -1,0 +1,2538 @@
+[
+  {
+    "uniekeSleutel": {
+      "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027"
+    },
+    "categorie": {
+      "naam": "Rechten en Plichten op het werk",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Rechten en Plichten op het werk 32u",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_AALST_01"
+        },
+        "locatie": {
+          "gemeente": "AALST"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_ANTWERPEN_01"
+        },
+        "locatie": {
+          "gemeente": "ANTWERPEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_DEHAAN_01"
+        },
+        "locatie": {
+          "gemeente": "DE HAAN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_HALLE_01"
+        },
+        "locatie": {
+          "gemeente": "HALLE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_HERENTALS_01"
+        },
+        "locatie": {
+          "gemeente": "HERENTALS"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_LIER_01"
+        },
+        "locatie": {
+          "gemeente": "LIER"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_LOKEREN_01"
+        },
+        "locatie": {
+          "gemeente": "LOKEREN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_MECHELEN_01"
+        },
+        "locatie": {
+          "gemeente": "MECHELEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_MENEN_01"
+        },
+        "locatie": {
+          "gemeente": "MENEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_OUDENAARDE_01"
+        },
+        "locatie": {
+          "gemeente": "OUDENAARDE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_ROESELARE_01"
+        },
+        "locatie": {
+          "gemeente": "ROESELARE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_SINTNIKLAAS_01"
+        },
+        "locatie": {
+          "gemeente": "SINT-NIKLAAS"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_TIENEN_01"
+        },
+        "locatie": {
+          "gemeente": "TIENEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_VILVOORDE_01"
+        },
+        "locatie": {
+          "gemeente": "VILVOORDE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32u_20262027_ZELE_01"
+        },
+        "locatie": {
+          "gemeente": "ZELE"
+        },
+        "residentieel": false,
+        "actief": true
+      }
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "GEEN_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027"
+    },
+    "categorie": {
+      "naam": "Rechten en Plichten op het werk",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Rechten en Plichten op het werk 32u + JONGERENDAG (40u VOV)",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_AALST_01"
+        },
+        "locatie": {
+          "gemeente": "AALST"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_ANTWERPEN_01"
+        },
+        "locatie": {
+          "gemeente": "ANTWERPEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_DEHAAN_01"
+        },
+        "locatie": {
+          "gemeente": "DE HAAN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_HALLE_01"
+        },
+        "locatie": {
+          "gemeente": "HALLE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_HERENTALS_01"
+        },
+        "locatie": {
+          "gemeente": "HERENTALS"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_LIER_01"
+        },
+        "locatie": {
+          "gemeente": "LIER"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_LOKEREN_01"
+        },
+        "locatie": {
+          "gemeente": "LOKEREN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_MECHELEN_01"
+        },
+        "locatie": {
+          "gemeente": "MECHELEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_MENEN_01"
+        },
+        "locatie": {
+          "gemeente": "MENEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_OUDENAARDE_01"
+        },
+        "locatie": {
+          "gemeente": "OUDENAARDE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_ROESELARE_01"
+        },
+        "locatie": {
+          "gemeente": "ROESELARE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_SINTNIKLAAS_01"
+        },
+        "locatie": {
+          "gemeente": "SINT-NIKLAAS"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_TIENEN_01"
+        },
+        "locatie": {
+          "gemeente": "TIENEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_VILVOORDE_01"
+        },
+        "locatie": {
+          "gemeente": "VILVOORDE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk32uJongerendag_20262027_ZELE_01"
+        },
+        "locatie": {
+          "gemeente": "ZELE"
+        },
+        "residentieel": false,
+        "actief": true
+      }
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "GEEN_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027"
+    },
+    "categorie": {
+      "naam": "Rechten en Plichten op het werk",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Rechten en Plichten op het werk 40u (met tweedaagse)",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_AALST_01"
+        },
+        "locatie": {
+          "gemeente": "AALST"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_ANTWERPEN_01"
+        },
+        "locatie": {
+          "gemeente": "ANTWERPEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_DEHAAN_01"
+        },
+        "locatie": {
+          "gemeente": "DE HAAN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_HALLE_01"
+        },
+        "locatie": {
+          "gemeente": "HALLE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_HERENTALS_01"
+        },
+        "locatie": {
+          "gemeente": "HERENTALS"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_LIER_01"
+        },
+        "locatie": {
+          "gemeente": "LIER"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_LOKEREN_01"
+        },
+        "locatie": {
+          "gemeente": "LOKEREN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_MECHELEN_01"
+        },
+        "locatie": {
+          "gemeente": "MECHELEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_MENEN_01"
+        },
+        "locatie": {
+          "gemeente": "MENEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_OUDENAARDE_01"
+        },
+        "locatie": {
+          "gemeente": "OUDENAARDE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_ROESELARE_01"
+        },
+        "locatie": {
+          "gemeente": "ROESELARE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_SINTNIKLAAS_01"
+        },
+        "locatie": {
+          "gemeente": "SINT-NIKLAAS"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_TIENEN_01"
+        },
+        "locatie": {
+          "gemeente": "TIENEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_VILVOORDE_01"
+        },
+        "locatie": {
+          "gemeente": "VILVOORDE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40u_20262027_ZELE_01"
+        },
+        "locatie": {
+          "gemeente": "ZELE"
+        },
+        "residentieel": false,
+        "actief": true
+      }
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "GEEN_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027"
+    },
+    "categorie": {
+      "naam": "Rechten en Plichten op het werk",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Rechten en Plichten op het werk 40u + JONGERENDAG (48u VOV)",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_AALST_01"
+        },
+        "locatie": {
+          "gemeente": "AALST"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_ANTWERPEN_01"
+        },
+        "locatie": {
+          "gemeente": "ANTWERPEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_DEHAAN_01"
+        },
+        "locatie": {
+          "gemeente": "DE HAAN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_HALLE_01"
+        },
+        "locatie": {
+          "gemeente": "HALLE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_HERENTALS_01"
+        },
+        "locatie": {
+          "gemeente": "HERENTALS"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_LIER_01"
+        },
+        "locatie": {
+          "gemeente": "LIER"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_LOKEREN_01"
+        },
+        "locatie": {
+          "gemeente": "LOKEREN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_MECHELEN_01"
+        },
+        "locatie": {
+          "gemeente": "MECHELEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_MENEN_01"
+        },
+        "locatie": {
+          "gemeente": "MENEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_OUDENAARDE_01"
+        },
+        "locatie": {
+          "gemeente": "OUDENAARDE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_ROESELARE_01"
+        },
+        "locatie": {
+          "gemeente": "ROESELARE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_SINTNIKLAAS_01"
+        },
+        "locatie": {
+          "gemeente": "SINT-NIKLAAS"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_TIENEN_01"
+        },
+        "locatie": {
+          "gemeente": "TIENEN"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_VILVOORDE_01"
+        },
+        "locatie": {
+          "gemeente": "VILVOORDE"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "RechtenEnPlichtenOpHetWerk40uJongeren_20262027_ZELE_01"
+        },
+        "locatie": {
+          "gemeente": "ZELE"
+        },
+        "residentieel": false,
+        "actief": true
+      }
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "GEEN_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "GroeitrajectVoorAfgevaardigden_20262027"
+    },
+    "categorie": {
+      "naam": "Groeitraject voor afgevaardigden",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Groeitraject voor afgevaardigden - jaar 3",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-14"
+          },
+          {
+            "localDate": "2026-10-15"
+          },
+          {
+            "localDate": "2027-01-14"
+          },
+          {
+            "localDate": "2027-01-15"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_GENT_02"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-26"
+          },
+          {
+            "localDate": "2026-10-27"
+          },
+          {
+            "localDate": "2027-02-04"
+          },
+          {
+            "localDate": "2027-02-05"
+          }
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_GENT_03"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-24"
+          },
+          {
+            "localDate": "2026-11-25"
+          },
+          {
+            "localDate": "2027-02-25"
+          },
+          {
+            "localDate": "2027-02-26"
+          }
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_GENT_04"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-12-16"
+          },
+          {
+            "localDate": "2026-12-17"
+          },
+          {
+            "localDate": "2027-03-01"
+          },
+          {
+            "localDate": "2027-03-02"
+          }
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_ROESELARE_01"
+        },
+        "locatie": {
+          "gemeente": "ROESELARE"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-12"
+          },
+          {
+            "localDate": "2026-11-13"
+          },
+          {
+            "localDate": "2027-02-18"
+          },
+          {
+            "localDate": "2027-02-19"
+          }
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_ROESELARE_02"
+        },
+        "locatie": {
+          "gemeente": "ROESELARE"
+        },
+        "data": [
+          {
+            "localDate": "2026-12-10"
+          },
+          {
+            "localDate": "2026-12-11"
+          },
+          {
+            "localDate": "2027-03-04"
+          },
+          {
+            "localDate": "2027-03-05"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_AALST_01"
+        },
+        "locatie": {
+          "gemeente": "AALST"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-12"
+          },
+          {
+            "localDate": "2026-10-13"
+          },
+          {
+            "localDate": "2027-01-18"
+          },
+          {
+            "localDate": "2027-01-19"
+          }
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_AALST_02"
+        },
+        "locatie": {
+          "gemeente": "AALST"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-24"
+          },
+          {
+            "localDate": "2026-11-25"
+          },
+          {
+            "localDate": "2027-02-22"
+          },
+          {
+            "localDate": "2027-02-23"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_SINTNIKLAAS_01"
+        },
+        "locatie": {
+          "gemeente": "SINT-NIKLAAS"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-05"
+          },
+          {
+            "localDate": "2026-10-06"
+          },
+          {
+            "localDate": "2027-03-08"
+          },
+          {
+            "localDate": "2027-03-09"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_VILVOORDE_01"
+        },
+        "locatie": {
+          "gemeente": "VILVOORDE"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-30"
+          },
+          {
+            "localDate": "2026-12-01"
+          },
+          {
+            "localDate": "2027-03-22"
+          },
+          {
+            "localDate": "2027-03-23"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_ANTWERPEN_01"
+        },
+        "locatie": {
+          "gemeente": "ANTWERPEN"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-19"
+          },
+          {
+            "localDate": "2026-11-20"
+          },
+          {
+            "localDate": "2027-02-15"
+          },
+          {
+            "localDate": "2027-02-16"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-22"
+          },
+          {
+            "localDate": "2026-10-23"
+          },
+          {
+            "localDate": "2027-01-25"
+          },
+          {
+            "localDate": "2027-01-26"
+          }
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_HASSELT_02"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-09"
+          },
+          {
+            "localDate": "2026-11-10"
+          },
+          {
+            "localDate": "2027-01-28"
+          },
+          {
+            "localDate": "2027-01-29"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_HASSELT_03"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "data": [
+          {
+            "localDate": "2026-12-07"
+          },
+          {
+            "localDate": "2026-12-08"
+          },
+          {
+            "localDate": "2027-03-11"
+          },
+          {
+            "localDate": "2027-03-12"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_TIENEN_01"
+        },
+        "locatie": {
+          "gemeente": "TIENEN"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-16"
+          },
+          {
+            "localDate": "2026-11-17"
+          },
+          {
+            "localDate": "2027-03-15"
+          },
+          {
+            "localDate": "2027-03-16"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "GroeitrajectVoorAfgevaardigden_20262027_LIER_01"
+        },
+        "locatie": {
+          "gemeente": "LIER"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-19"
+          },
+          {
+            "localDate": "2026-10-20"
+          },
+          {
+            "localDate": "2027-02-01"
+          },
+          {
+            "localDate": "2027-02-02"
+          }
+        ],
+        "residentieel": false,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "SYNDICAAL_VERLOF",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "VRIJETIJD"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Alternatieve_verloning_Ontslagrecht_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Alternatieve verloning + Ontslagrecht",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "Alternatieve_verloning_Ontslagrecht_20262027_Aalst_01"
+        },
+        "locatie": {
+          "gemeente": "AALST"
+        },
+        "data": [
+          {
+            "localDate": "2026-12-07"
+          },
+          {
+            "localDate": "2026-12-08"
+          },
+          {
+            "localDate": "2027-02-01"
+          },
+          {
+            "localDate": "2027-02-02"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "Alternatieve_verloning_Ontslagrecht_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2027-01-11"
+          },
+          {
+            "localDate": "2027-01-12"
+          },
+          {
+            "localDate": "2027-02-18"
+          },
+          {
+            "localDate": "2027-02-19"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "Alternatieve_verloning_Ontslagrecht_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "data": [
+          {
+            "localDate": "2027-01-07"
+          },
+          {
+            "localDate": "2027-01-08"
+          },
+          {
+            "localDate": "2027-02-15"
+          },
+          {
+            "localDate": "2027-02-16"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "Alternatieve_verloning_Ontslagrecht_20262027_LIER_01"
+        },
+        "locatie": {
+          "gemeente": "LIER"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-26"
+          },
+          {
+            "localDate": "2026-10-27"
+          },
+          {
+            "localDate": "2026-11-23"
+          },
+          {
+            "localDate": "2026-11-24"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "Alternatieve_verloning_Ontslagrecht_20262027_SINTNIKLAAS_01"
+        },
+        "locatie": {
+          "gemeente": "SINT-NIKLAAS"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-15"
+          },
+          {
+            "localDate": "2026-10-16"
+          },
+          {
+            "localDate": "2026-10-29"
+          },
+          {
+            "localDate": "2026-10-30"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Communiceren_Inspectiediensten_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Communiceren als afgevaardigde + Inspectiediensten",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "Communiceren_Inspectiediensten_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-19"
+          },
+          {
+            "localDate": "2026-11-20"
+          },
+          {
+            "localDate": "2027-01-18"
+          },
+          {
+            "localDate": "2027-01-19"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "Communiceren_Inspectiediensten_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-29"
+          },
+          {
+            "localDate": "2026-10-30"
+          },
+          {
+            "localDate": "2027-01-07"
+          },
+          {
+            "localDate": "2027-01-08"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": false
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Welzijn_Communiceren_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Welzijn op het werk + Communiceren als afgevaardigde",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "Welzijn_Communiceren_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-26"
+          },
+          {
+            "localDate": "2026-11-27"
+          },
+          {
+            "localDate": "2027-02-25"
+          },
+          {
+            "localDate": "2027-02-26"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Inspectiediensten_Communiceren_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Inspectiediensten + Communiceren als afgevaardigde",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "Inspectiediensten_Communiceren_20262027_ROESELARE_01"
+        },
+        "locatie": {
+          "gemeente": "ROESELARE"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-26"
+          },
+          {
+            "localDate": "2026-11-27"
+          },
+          {
+            "localDate": "2027-01-14"
+          },
+          {
+            "localDate": "2027-01-15"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Welzijn_Ontslagrecht_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Welzijn op het werk + Ontslagrecht",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "Welzijn_Ontslagrecht_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-12-03"
+          },
+          {
+            "localDate": "2026-12-04"
+          },
+          {
+            "localDate": "2027-01-28"
+          },
+          {
+            "localDate": "2027-01-29"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": false
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Ontslagrecht_Welzijn_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Ontslagrecht + Welzijn op het werk",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "Ontslagrecht_Welzijn__20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-12-03"
+          },
+          {
+            "localDate": "2026-12-04"
+          },
+          {
+            "localDate": "2027-01-28"
+          },
+          {
+            "localDate": "2027-01-29"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "Ontslagrecht_Welzijn_20262027_VILVOORDE_01"
+        },
+        "locatie": {
+          "gemeente": "VILVOORDE"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-16"
+          },
+          {
+            "localDate": "2026-11-17"
+          },
+          {
+            "localDate": "2026-12-10"
+          },
+          {
+            "localDate": "2026-12-11"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Alternatieve_verloning_Welzijn_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Alternatieve verloning + Welzijn op het werk (2d Gent, Hasselt of Mechelen + 2d Gent met 1 overnachting)",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "Alternatieve_verloning_Welzijn_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-19"
+          },
+          {
+            "localDate": "2026-11-20"
+          },
+          {
+            "localDate": "2027-01-21"
+          },
+          {
+            "localDate": "2027-01-22"
+          }
+        ],
+        "residentieel": true,
+        "actief": false
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "Alternatieve_verloning_Welzijn_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "data": [
+          {
+            "localDate": "2026-12-14"
+          },
+          {
+            "localDate": "2026-12-15"
+          },
+          {
+            "localDate": "2027-02-18"
+          },
+          {
+            "localDate": "2027-02-19"
+          }
+        ],
+        "residentieel": true,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "Alternatieve_verloning_Welzijn_20262027_MECHELEN_01"
+        },
+        "locatie": {
+          "gemeente": "MECHELEN"
+        },
+        "data": [
+          {
+            "localDate": "2027-01-11"
+          },
+          {
+            "localDate": "2027-01-12"
+          },
+          {
+            "localDate": "2027-03-01"
+          },
+          {
+            "localDate": "2027-03-02"
+          }
+        ],
+        "residentieel": true,
+        "actief": false
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Inspectiedienst_Welzijn_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Inspectiediensten + Welzijn op het werk (2d Gent of Hasselt + 2d Gent met 1 overnachting)",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "Inspectiedienst_Welzijn_20262027_HASSELT_01"
+        },
+        "locatie": {
+          "gemeente": "HASSELT"
+        },
+        "data": [
+          {
+            "localDate": "2026-12-03"
+          },
+          {
+            "localDate": "2026-12-04"
+          },
+          {
+            "localDate": "2027-02-04"
+          },
+          {
+            "localDate": "2027-02-05"
+          }
+        ],
+        "residentieel": true,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "Inspectiedienst_Welzijn_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-12"
+          },
+          {
+            "localDate": "2026-11-13"
+          },
+          {
+            "localDate": "2027-01-21"
+          },
+          {
+            "localDate": "2027-01-22"
+          }
+        ],
+        "residentieel": true,
+        "actief": false
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Communiceren_Welzijn_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Communiceren als afgevaardigde + Welzijn op het werk (2d Gent of Tienen + 2d Gent met 1 overnachting)",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "Communiceren_Welzijn_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-12"
+          },
+          {
+            "localDate": "2026-10-13"
+          },
+          {
+            "localDate": "2026-12-09"
+          },
+          {
+            "localDate": "2026-12-10"
+          }
+        ],
+        "residentieel": true,
+        "actief": false
+      },
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "Communiceren_Welzijn_20262027_TIENEN_01"
+        },
+        "locatie": {
+          "gemeente": "TIENEN"
+        },
+        "data": [
+          {
+            "localDate": "2027-01-25"
+          },
+          {
+            "localDate": "2027-01-26"
+          },
+          {
+            "localDate": "2027-03-08"
+          },
+          {
+            "localDate": "2027-03-09"
+          }
+        ],
+        "residentieel": true,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "Ontslag_Welzijn_20262027"
+    },
+    "categorie": {
+      "naam": "De ondernemingsorganen",
+      "url": "https://xn--com-dma.be/een-opleiding-volgen/"
+    },
+    "titel": "Ontslagrecht + Welzijn op het werk (2d Gent + 2d Gent met 1 overnachting)",
+    "vormingsorganisatie": {
+      "naam": "COME",
+      "taal": "NEDERLANDS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "Ontslag_Welzijn_20262027_GENT_01"
+        },
+        "locatie": {
+          "gemeente": "GENT"
+        },
+        "data": [
+          {
+            "localDate": "2026-10-22"
+          },
+          {
+            "localDate": "2026-10-23"
+          },
+          {
+            "localDate": "2027-03-04"
+          },
+          {
+            "localDate": "2027-03-05"
+          }
+        ],
+        "residentieel": true,
+        "actief": false
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "EEN_MANDAAT_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+
+  {
+    "uniekeSleutel": {
+      "sleutel": "CE_20262027"
+    },
+    "categorie": {
+      "naam": "Formation organe d’entreprise CE",
+      "url": "https://www.fast-asbl.be/catalogue-des-formations/"
+    },
+    "titel": "Formation organe d’entreprise CE",
+    "vormingsorganisatie": {
+      "naam": "FAST",
+      "taal": "FRANS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "CE_20262027_AZUR"
+        },
+        "locatie": {
+          "gemeente": "Azur en Ardenne"
+        },
+        "residentieel": true,
+        "actief": true
+      },
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "CE_20262027_BRUX"
+        },
+        "locatie": {
+          "gemeente": "Bruxelles"
+        },
+        "residentieel": false,
+        "actief": true
+      }    
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "MANDAAT_ONDERNEMINGSRAAD"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+  {
+    "uniekeSleutel": {
+      "sleutel": "CPPT_20262027"
+    },
+    "categorie": {
+      "naam": "Formation organe d’entreprise CPPT",
+      "url": "https://www.fast-asbl.be/catalogue-des-formations/"
+    },
+    "titel": "Formation organe d’entreprise CPPT",
+    "vormingsorganisatie": {
+      "naam": "FAST",
+      "taal": "FRANS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "CPPT_20262027_AZUR"
+        },
+        "locatie": {
+          "gemeente": "Azur en Ardenne"
+        },
+        "residentieel": true,
+        "actief": true
+      },
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "CE_20262027_BRUX"
+        },
+        "locatie": {
+          "gemeente": "Bruxelles"
+        },
+        "residentieel": false,
+        "actief": true
+      }   
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "MANDAAT_COMITE_VOOR_PREVENTIE_EN_BESCHERMING"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+  {
+    "uniekeSleutel": {
+      "sleutel": "DS_20262027"
+    },
+    "categorie": {
+      "naam": "Formation organe d’entreprise DS",
+      "url": "https://www.fast-asbl.be/catalogue-des-formations/"
+    },
+    "titel": "Formation organe d’entreprise DS",
+    "vormingsorganisatie": {
+      "naam": "FAST",
+      "taal": "FRANS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "DS_20262027_BRUX"
+        },
+        "locatie": {
+          "gemeente": "Bruxelles"
+        },
+        "residentieel": false,
+        "actief": true
+      },
+
+      {
+        "uniekeSleutel": {
+          "sleutel": "CE_20262027_NAMUR"
+        },
+        "locatie": {
+          "gemeente": "Namur"
+        },
+        "residentieel": false,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "MANDAAT_SYNDICALE_DELEGATIE"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  },
+  {
+    "uniekeSleutel": {
+      "sleutel": "FE_20262027"
+    },
+    "categorie": {
+      "naam": "Formation environnement Wallonie et Bruxelles",
+      "url": "https://www.fast-asbl.be/catalogue-des-formations/"
+    },
+    "titel": "Formation environnement Wallonie et Bruxelles",
+    "vormingsorganisatie": {
+      "naam": "FAST",
+      "taal": "FRANS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "FE__20262027_BRUX_01"
+        },
+        "locatie": {
+          "gemeente": "Bruxelles"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-05"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "FE__20262027_BRUX_02"
+        },
+        "locatie": {
+          "gemeente": "Bruxelles"
+        },
+        "data": [
+          {
+            "localDate": "2026-11-16"
+          }
+
+        ],
+        "residentieel": false,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "MANDAAT_ONDERNEMINGSRAAD",
+        "MANDAAT_COMITE_VOOR_PREVENTIE_EN_BESCHERMING"
+      ]
+    },
+    "cursusRegios": [
+      "BRUSSEL"
+    ]
+  },
+  {
+    "uniekeSleutel": {
+      "sleutel": "FSD_20262027"
+    },
+    "categorie": {
+      "naam": "Formation syndicale décentralisée (FSD)",
+      "url": "https://www.fast-asbl.be/catalogue-des-formations/"
+    },
+    "titel": "Formation syndicale décentralisée (FSD)",
+    "vormingsorganisatie": {
+      "naam": "FAST",
+      "taal": "FRANS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "FSD__20262027_BRUX_01"
+        },
+        "locatie": {
+          "gemeente": "Bruxelles"
+        },
+ 
+        "residentieel": false,
+        "actief": true
+      },
+      {
+        "uniekeSleutel": {
+          "sleutel": "FE__20262027_MONS"
+        },
+        "locatie": {
+          "gemeente": "Mons"
+        },
+ 
+        "residentieel": false,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD",
+      "VLAAMS_OPLEIDINGS_VERLOF",
+      "BETAALD_EDUCATIEF_VERLOF",
+      "SYNDICAAL_VERLOF"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "WERKNEMER",
+      "mandaatVereiste": [
+        "GEEN_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "BRUSSEL"
+    ]
+  },
+  {
+    "uniekeSleutel": {
+      "sleutel": "FMS_20262027"
+    },
+    "categorie": {
+      "naam": "Formation Médiors – Séniors",
+      "url": "https://www.fast-asbl.be/catalogue-des-formations/"
+    },
+    "titel": "Formation Médiors – Séniors",
+    "vormingsorganisatie": {
+      "naam": "FAST",
+      "taal": "FRANS",
+      "begindatumInschrijvingsperiode": "2026-05-01",
+      "einddatumInschrijvingsperiode": "2026-12-12"
+    },
+    "vormingsjaar": {
+      "vormingsjaar": "2026-2027"
+    },
+    "activiteiten": [
+      {
+        "uniekeSleutel": {
+          "sleutel": "FMS__20262027_LALOUV"
+        },
+        "locatie": {
+          "gemeente": "LA LOUVIERE"
+        },
+ 
+        "residentieel": false,
+        "actief": true
+      }
+
+    ],
+    "mogelijkeVerlofstelsels": [
+      "VRIJETIJD"
+    ],
+    "vereistAantalCreditsCursus": 0,
+    "vereisteEigenschappenCursisten": {
+      "statuut": "GEPENSIONEERDE",
+      "mandaatVereiste": [
+        "GEEN_VEREIST"
+      ]
+    },
+    "cursusRegios": [
+      "VLAANDEREN",
+      "WALLONIE",
+      "BRUSSEL"
+    ]
+  }
+
+]

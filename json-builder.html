@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JSON-builder Cursussen</title>
+<style>
+  :root {
+    --bg: #f5f6f8; --card: #ffffff; --text: #1d2430; --muted: #5f6b7a; --border: #d9dee5;
+    --accent: #1f3a6b; --accent-2: #2f5aa8; --ok: #1e7a46; --ok-bg: #e7f5ec;
+    --err: #b42318; --err-bg: #fdecea; --warn: #8a5a00; --warn-bg: #fff4dc; --code-bg: #f0f2f5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.5 "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--text); }
+  header { background: var(--accent); color: #fff; padding: 18px 24px; }
+  header h1 { margin: 0; font-size: 20px; font-weight: 600; }
+  header p { margin: 2px 0 0; opacity: .8; font-size: 13px; }
+  main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 40px; display: grid; gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  #drop { border: 2px dashed var(--border); border-radius: 10px; padding: 34px 16px; text-align: center; cursor: pointer;
+          background: var(--card); transition: border-color .15s, background .15s; }
+  #drop.over { border-color: var(--accent-2); background: #eef3fc; }
+  #drop strong { color: var(--accent); }
+  #drop .sub { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  #bestandsnaam { margin-top: 8px; font-weight: 600; }
+  .stats { display: flex; flex-wrap: wrap; gap: 10px; }
+  .stat { background: var(--code-bg); border-radius: 8px; padding: 8px 14px; min-width: 120px; }
+  .stat b { display: block; font-size: 20px; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  .status { padding: 10px 14px; border-radius: 8px; font-weight: 600; margin-bottom: 12px; }
+  .status.ok { background: var(--ok-bg); color: var(--ok); }
+  .status.err { background: var(--err-bg); color: var(--err); }
+  ul.msgs { margin: 8px 0 0; padding: 0; list-style: none; max-height: 320px; overflow: auto; }
+  ul.msgs li { padding: 6px 10px; border-radius: 6px; margin-bottom: 4px; font-size: 14px; }
+  ul.msgs li.err { background: var(--err-bg); color: var(--err); }
+  ul.msgs li.warn { background: var(--warn-bg); color: var(--warn); }
+  ul.msgs li .loc { font-weight: 600; margin-right: 6px; }
+  .toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+  .toolbar h2 { font-size: 16px; margin: 0 auto 0 0; }
+  button { font: inherit; border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 6px;
+           padding: 7px 14px; cursor: pointer; }
+  button.secondary { background: #fff; color: var(--accent); }
+  button:disabled { opacity: .45; cursor: default; }
+  pre { margin: 0; background: var(--code-bg); border-radius: 8px; padding: 12px; max-height: 520px; overflow: auto;
+        font: 12.5px/1.45 Consolas, "Cascadia Mono", monospace; white-space: pre; }
+  .hidden { display: none; }
+  .muted { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>JSON-builder Cursussen</h1>
+  <p>Excel (Cursussen.xlsx) → JSON. Werkt volledig offline; er wordt niets verstuurd.</p>
+</header>
+<main>
+  <label id="drop">
+    <input type="file" id="bestand" accept=".xlsx,.xlsm" hidden>
+    <div><strong>Sleep je Excel-bestand hierheen</strong> of klik om te kiezen</div>
+    <div class="sub">.xlsx met de bladen Cursussen, Activiteiten en Lijsten</div>
+    <div id="bestandsnaam"></div>
+  </label>
+
+  <section id="resultaat" class="card hidden">
+    <div id="status" class="status"></div>
+    <div class="stats" id="stats"></div>
+    <ul class="msgs" id="meldingen"></ul>
+  </section>
+
+  <section id="uitvoer" class="card hidden">
+    <div class="toolbar">
+      <h2>JSON</h2>
+      <button class="secondary" id="kopieer">Kopiëren</button>
+      <button id="download">Download Cursussen.json</button>
+    </div>
+    <pre id="json"></pre>
+  </section>
+
+  <p class="muted">Sleutels worden automatisch gemaakt: cursus = titel in CamelCase + "_" + vormingsjaar (bv. RechtenEnPlichtenOpHetWerk32u_20262027);
+    activiteit = cursussleutel + "_" + PLAATS + "_" + volgnummer per plaats (01, 02, …). Activiteiten staan alfabetisch op gemeente.</p>
+</main>
+
+<script>
+'use strict';
+
+/* ================= ZIP lezen (xlsx is een zip) ================= */
+
+async function leesZip(buffer) {
+  const view = new DataView(buffer);
+  const bytes = new Uint8Array(buffer);
+  // End Of Central Directory zoeken (achteraan, max. 64 KB commentaar)
+  let eocd = -1;
+  for (let i = bytes.length - 22; i >= Math.max(0, bytes.length - 22 - 65535); i--) {
+    if (view.getUint32(i, true) === 0x06054b50) { eocd = i; break; }
+  }
+  if (eocd < 0) throw new Error('Dit is geen geldig .xlsx-bestand (geen zip). Bewaar het bestand in Excel als "Excel-werkmap (*.xlsx)".');
+  const aantal = view.getUint16(eocd + 10, true);
+  let p = view.getUint32(eocd + 16, true);
+  const bestanden = new Map();
+  for (let n = 0; n < aantal; n++) {
+    if (view.getUint32(p, true) !== 0x02014b50) throw new Error('Beschadigd zip-bestand.');
+    const methode = view.getUint16(p + 10, true);
+    const compGrootte = view.getUint32(p + 20, true);
+    const naamLen = view.getUint16(p + 28, true);
+    const extraLen = view.getUint16(p + 30, true);
+    const commentLen = view.getUint16(p + 32, true);
+    const lokaal = view.getUint32(p + 42, true);
+    const naam = new TextDecoder().decode(bytes.subarray(p + 46, p + 46 + naamLen));
+    bestanden.set(naam, { methode, compGrootte, lokaal });
+    p += 46 + naamLen + extraLen + commentLen;
+  }
+  return {
+    heeft: naam => bestanden.has(naam),
+    async tekst(naam) {
+      const e = bestanden.get(naam);
+      if (!e) return null;
+      const start = e.lokaal + 30 + view.getUint16(e.lokaal + 26, true) + view.getUint16(e.lokaal + 28, true);
+      const data = bytes.subarray(start, start + e.compGrootte);
+      let ruw;
+      if (e.methode === 0) ruw = data;
+      else if (e.methode === 8) {
+        const stroom = new Blob([data]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+        ruw = new Uint8Array(await new Response(stroom).arrayBuffer());
+      } else throw new Error('Niet-ondersteunde compressie in ' + naam);
+      return new TextDecoder('utf-8').decode(ruw);
+    }
+  };
+}
+
+/* ================= Excel-werkmap lezen ================= */
+
+const REL_NS = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships';
+
+function xml(tekst) {
+  const doc = new DOMParser().parseFromString(tekst, 'application/xml');
+  if (doc.getElementsByTagName('parsererror').length) throw new Error('Kon XML in het Excel-bestand niet lezen.');
+  return doc;
+}
+const alle = (el, naam) => Array.from(el.getElementsByTagNameNS('*', naam));
+const eerste = (el, naam) => el.getElementsByTagNameNS('*', naam)[0] || null;
+
+function kolomIndex(ref) {              // "AB12" -> 27 (0-gebaseerd)
+  let n = 0;
+  for (const ch of ref) {
+    const c = ch.charCodeAt(0);
+    if (c < 65 || c > 90) break;
+    n = n * 26 + (c - 64);
+  }
+  return n - 1;
+}
+function kolomLetter(i) {
+  let s = ''; i++;
+  while (i > 0) { const m = (i - 1) % 26; s = String.fromCharCode(65 + m) + s; i = Math.floor((i - 1) / 26); }
+  return s;
+}
+
+async function leesWerkmap(buffer) {
+  const zip = await leesZip(buffer);
+  const wbTekst = await zip.tekst('xl/workbook.xml');
+  if (!wbTekst) throw new Error('Geen Excel-werkmap gevonden in dit bestand.');
+  const wb = xml(wbTekst);
+  const rels = xml(await zip.tekst('xl/_rels/workbook.xml.rels'));
+  const doelen = {};
+  for (const r of alle(rels, 'Relationship')) doelen[r.getAttribute('Id')] = r.getAttribute('Target');
+
+  const gedeeld = [];
+  const ssTekst = await zip.tekst('xl/sharedStrings.xml');
+  if (ssTekst) {
+    for (const si of alle(xml(ssTekst), 'si')) {
+      // alle <t> behalve fonetische hulp (<rPh>)
+      gedeeld.push(alle(si, 't').filter(t => t.parentNode.localName !== 'rPh').map(t => t.textContent).join(''));
+    }
+  }
+
+  const bladen = {};
+  for (const s of alle(wb, 'sheet')) {
+    const id = s.getAttributeNS(REL_NS, 'id') || s.getAttribute('r:id');
+    let doel = doelen[id];
+    if (!doel) continue;
+    doel = doel.startsWith('/') ? doel.slice(1) : 'xl/' + doel;
+    const tekst = await zip.tekst(doel);
+    if (tekst) bladen[s.getAttribute('name')] = leesBlad(xml(tekst), gedeeld);
+  }
+  return bladen;
+}
+
+// Geeft een array van rijen terug; elke rij is een array van celwaarden (string | number | boolean | null).
+function leesBlad(doc, gedeeld) {
+  const rijen = [];
+  for (const row of alle(doc, 'row')) {
+    const r = parseInt(row.getAttribute('r'), 10) - 1;
+    const rij = [];
+    let volgende = 0;
+    for (const c of alle(row, 'c')) {
+      const ref = c.getAttribute('r');
+      const k = ref ? kolomIndex(ref) : volgende;
+      volgende = k + 1;
+      const t = c.getAttribute('t');
+      const v = eerste(c, 'v');
+      let waarde = null;
+      if (t === 's') waarde = v ? gedeeld[parseInt(v.textContent, 10)] : null;
+      else if (t === 'inlineStr') waarde = alle(c, 't').map(x => x.textContent).join('');
+      else if (t === 'str') waarde = v ? v.textContent : null;
+      else if (t === 'b') waarde = v ? v.textContent === '1' : null;
+      else if (t === 'e') waarde = v ? v.textContent : null;
+      else if (v) waarde = Number(v.textContent);
+      rij[k] = waarde;
+    }
+    rijen[r] = rij;
+  }
+  return rijen;
+}
+
+/* ================= Hulpfuncties ================= */
+
+const zonderAccenten = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+const tekstVan = v => (v === null || v === undefined) ? '' : String(v).trim();
+const normKop = s => zonderAccenten(tekstVan(s)).toLowerCase().replace(/\s+/g, ' ');
+
+function camelCase(titel) {
+  return zonderAccenten(titel).split(/[^A-Za-z0-9]+/).filter(Boolean)
+    .map(w => w[0].toUpperCase() + w.slice(1)).join('');
+}
+const plaatsCode = gemeente => zonderAccenten(gemeente).toUpperCase().replace(/[^A-Z0-9]/g, '');
+
+// Excel-datum (getal of tekst) -> "yyyy-mm-dd", of null als ongeldig
+function naarDatum(v) {
+  if (typeof v === 'number' && isFinite(v)) {
+    if (v < 1 || v > 2958465) return null;
+    const d = new Date(Date.UTC(1899, 11, 30) + Math.round(v) * 86400000);
+    return d.toISOString().slice(0, 10);
+  }
+  const s = tekstVan(v);
+  let m, j, mnd, dag;
+  if ((m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/))) [j, mnd, dag] = [+m[1], +m[2], +m[3]];
+  else if ((m = s.match(/^(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{4})$/))) [dag, mnd, j] = [+m[1], +m[2], +m[3]];
+  else return null;
+  const d = new Date(Date.UTC(j, mnd - 1, dag));
+  if (d.getUTCFullYear() !== j || d.getUTCMonth() !== mnd - 1 || d.getUTCDate() !== dag) return null;
+  return d.toISOString().slice(0, 10);
+}
+
+/* ================= Omzetting ================= */
+
+const VERPLICHTE_LIJSTEN = ['Taal', 'Statuut', 'JaNee', 'Verlofstelsel', 'Mandaat', 'Regio'];
+
+function zetOm(bladen) {
+  const fouten = [], waarschuwingen = [];
+  const fout = (loc, tekst) => fouten.push({ loc, tekst });
+  const waarschuw = (loc, tekst) => waarschuwingen.push({ loc, tekst });
+
+  for (const naam of ['Cursussen', 'Activiteiten', 'Lijsten']) {
+    if (!bladen[naam]) fout('Werkmap', `Blad "${naam}" ontbreekt.`);
+  }
+  if (fouten.length) return { fouten, waarschuwingen };
+
+  // ---- Lijsten ----
+  const lijsten = {};
+  {
+    const rijen = bladen.Lijsten;
+    const kop = rijen[0] || [];
+    kop.forEach((naam, k) => {
+      const n = tekstVan(naam);
+      if (!n) return;
+      lijsten[n] = rijen.slice(1).map(r => r && tekstVan(r[k])).filter(Boolean);
+    });
+    for (const l of VERPLICHTE_LIJSTEN) {
+      if (!lijsten[l]) fout('Lijsten', `Kolom "${l}" ontbreekt.`);
+    }
+    if (fouten.length) return { fouten, waarschuwingen };
+  }
+
+  // kolomkoppen -> index; ontbrekende verplichte kolommen = fout
+  function kolommen(blad, verplicht) {
+    const kop = (bladen[blad][0] || []);
+    const map = {};
+    kop.forEach((naam, k) => { if (tekstVan(naam)) map[normKop(naam)] = k; });
+    for (const v of verplicht) if (!(normKop(v) in map)) fout(blad, `Kolom "${v}" ontbreekt in rij 1.`);
+    return { map, kop };
+  }
+  const cel = (rij, map, naam) => rij[map[normKop(naam)]];
+  const leeg = rij => !rij || rij.every(v => tekstVan(v) === '');
+
+  // ---- Cursussen ----
+  const codeGroepen = [['Verlofstelsel', 'mogelijkeVerlofstelsels'], ['Mandaat', 'mandaatVereiste'], ['Regio', 'cursusRegios']];
+  const cursusVelden = ['Titel', 'Categorie', 'Categorie URL', 'Vormingsorganisatie', 'Taal', 'Begin inschrijving',
+    'Einde inschrijving', 'Vormingsjaar', 'Credits', 'Statuut'];
+  const alleCodes = codeGroepen.flatMap(([l]) => lijsten[l]);
+  const C = kolommen('Cursussen', [...cursusVelden, ...alleCodes]);
+  const A = kolommen('Activiteiten', ['Cursus', 'Gemeente', 'Residentieel', 'Actief']);
+  if (fouten.length) return { fouten, waarschuwingen };
+
+  const bekend = new Set([...cursusVelden, ...alleCodes].map(normKop));
+  C.kop.forEach((naam, k) => {
+    if (tekstVan(naam) && !bekend.has(normKop(naam)))
+      waarschuw(`Cursussen ${kolomLetter(k)}1`, `Onbekende kolom "${tekstVan(naam)}" wordt genegeerd.`);
+  });
+
+  const inLijst = (lijst, w) => lijsten[lijst].find(x => x.toUpperCase() === w.toUpperCase());
+  const cursussen = [];
+  const perTitel = new Map();
+
+  bladen.Cursussen.forEach((rij, i) => {
+    if (i === 0 || leeg(rij)) return;
+    const rnr = i + 1;
+    const loc = naam => `Cursussen ${kolomLetter(C.map[normKop(naam)])}${rnr}`;
+    const verplichtTekst = naam => {
+      const w = tekstVan(cel(rij, C.map, naam));
+      if (!w) fout(loc(naam), `"${naam}" is leeg.`);
+      return w;
+    };
+    const uitLijst = (naam, lijst) => {
+      const w = verplichtTekst(naam);
+      if (!w) return w;
+      const gevonden = inLijst(lijst, w);
+      if (!gevonden) fout(loc(naam), `"${w}" is geen geldige waarde voor ${naam} (toegelaten: ${lijsten[lijst].join(', ')}).`);
+      return gevonden || w;
+    };
+    const datum = naam => {
+      const ruw = cel(rij, C.map, naam);
+      if (tekstVan(ruw) === '') { fout(loc(naam), `"${naam}" is leeg.`); return ''; }
+      const d = naarDatum(ruw);
+      if (!d) fout(loc(naam), `"${tekstVan(ruw)}" is geen geldige datum.`);
+      return d || '';
+    };
+
+    const titel = verplichtTekst('Titel');
+    const categorie = verplichtTekst('Categorie');
+    const url = verplichtTekst('Categorie URL');
+    const organisatie = verplichtTekst('Vormingsorganisatie');
+    const taal = uitLijst('Taal', 'Taal');
+    const begin = datum('Begin inschrijving');
+    const einde = datum('Einde inschrijving');
+    const jaar = verplichtTekst('Vormingsjaar');
+    if (jaar && !/^\d{4}-\d{4}$/.test(jaar)) fout(loc('Vormingsjaar'), `Vormingsjaar "${jaar}" moet de vorm 2026-2027 hebben.`);
+    else if (jaar && +jaar.slice(5) !== +jaar.slice(0, 4) + 1) waarschuw(loc('Vormingsjaar'), `Vormingsjaar "${jaar}": tweede jaar is niet het jaar na het eerste.`);
+    if (begin && einde && begin > einde) waarschuw(loc('Einde inschrijving'), 'Einde inschrijving ligt vóór begin inschrijving.');
+
+    const creditsRuw = cel(rij, C.map, 'Credits');
+    let credits = 0;
+    if (tekstVan(creditsRuw) !== '') {
+      credits = Number(String(creditsRuw).replace(',', '.'));
+      if (!Number.isInteger(credits) || credits < 0) { fout(loc('Credits'), `Credits "${tekstVan(creditsRuw)}" moet een geheel getal ≥ 0 zijn.`); credits = 0; }
+    }
+    const statuut = uitLijst('Statuut', 'Statuut');
+
+    const codes = {};
+    for (const [lijst, veld] of codeGroepen) {
+      codes[veld] = [];
+      for (const code of lijsten[lijst]) {
+        const w = tekstVan(cel(rij, C.map, code));
+        if (!w) continue;
+        if (w.toUpperCase() === 'X') codes[veld].push(code);
+        else fout(loc(code), `Kolom ${code}: gebruik "X" of laat leeg (gevonden: "${w}").`);
+      }
+      if (!codes[veld].length) fout(`Cursussen rij ${rnr}`, `Geen enkele ${lijst.toLowerCase()} aangeduid met X.`);
+    }
+
+    const cursus = {
+      rij: rnr,
+      titel,
+      sleutel: titel && jaar ? camelCase(titel) + '_' + jaar.replace(/\D/g, '') : '',
+      obj: null,
+      activiteiten: []
+    };
+    cursus.maak = () => ({
+      uniekeSleutel: { sleutel: cursus.sleutel },
+      categorie: { naam: categorie, url },
+      titel,
+      vormingsorganisatie: {
+        naam: organisatie, taal,
+        begindatumInschrijvingsperiode: begin,
+        einddatumInschrijvingsperiode: einde
+      },
+      vormingsjaar: { vormingsjaar: jaar },
+      activiteiten: cursus.activiteiten.map(a => a.obj),
+      mogelijkeVerlofstelsels: codes.mogelijkeVerlofstelsels,
+      vereistAantalCreditsCursus: credits,
+      vereisteEigenschappenCursisten: { statuut, mandaatVereiste: codes.mandaatVereiste },
+      cursusRegios: codes.cursusRegios
+    });
+    cursussen.push(cursus);
+    if (titel) {
+      const k = titel.toLowerCase();
+      if (!perTitel.has(k)) perTitel.set(k, []);
+      perTitel.get(k).push(cursus);
+    }
+  });
+
+  // unieke cursussleutels
+  const perSleutel = new Map();
+  for (const c of cursussen) {
+    if (!c.sleutel) continue;
+    if (!perSleutel.has(c.sleutel)) perSleutel.set(c.sleutel, []);
+    perSleutel.get(c.sleutel).push(c);
+  }
+  for (const [sleutel, lijst] of perSleutel) {
+    if (lijst.length > 1)
+      fout('Cursussen rijen ' + lijst.map(c => c.rij).join(', '), `Dubbele cursussleutel "${sleutel}". Titel + vormingsjaar moeten uniek zijn.`);
+  }
+  for (const lijst of perTitel.values()) {
+    if (lijst.length > 1 && new Set(lijst.map(c => c.sleutel)).size > 1)
+      fout('Cursussen rijen ' + lijst.map(c => c.rij).join(', '),
+        `Titel "${lijst[0].titel}" komt meerdere keren voor; activiteiten kunnen niet eenduidig gekoppeld worden.`);
+  }
+
+  // ---- Activiteiten ----
+  const datumKolommen = A.kop.map((naam, k) => ({ naam: tekstVan(naam), k }))
+    .filter(x => /^datum\s*\d+$/i.test(x.naam))
+    .sort((a, b) => parseInt(a.naam.replace(/\D/g, ''), 10) - parseInt(b.naam.replace(/\D/g, ''), 10));
+  const bekendA = new Set(['cursus', 'gemeente', 'residentieel', 'actief']);
+  A.kop.forEach((naam, k) => {
+    const n = tekstVan(naam);
+    if (n && !bekendA.has(normKop(n)) && !/^datum\s*\d+$/i.test(n))
+      waarschuw(`Activiteiten ${kolomLetter(k)}1`, `Onbekende kolom "${n}" wordt genegeerd.`);
+  });
+
+  bladen.Activiteiten.forEach((rij, i) => {
+    if (i === 0 || leeg(rij)) return;
+    const rnr = i + 1;
+    const loc = naam => `Activiteiten ${kolomLetter(A.map[normKop(naam)])}${rnr}`;
+
+    const cursusTitel = tekstVan(cel(rij, A.map, 'Cursus'));
+    let cursus = null;
+    if (!cursusTitel) fout(loc('Cursus'), '"Cursus" is leeg.');
+    else {
+      const kandidaten = perTitel.get(cursusTitel.toLowerCase());
+      if (!kandidaten) fout(loc('Cursus'), `Cursus "${cursusTitel}" bestaat niet in het blad Cursussen.`);
+      else cursus = kandidaten[0];
+    }
+
+    const gemeente = tekstVan(cel(rij, A.map, 'Gemeente'));
+    if (!gemeente) fout(loc('Gemeente'), '"Gemeente" is leeg.');
+    else if (!plaatsCode(gemeente)) fout(loc('Gemeente'), `Gemeente "${gemeente}" bevat geen letters of cijfers.`);
+
+    const jaNee = naam => {
+      const w = tekstVan(cel(rij, A.map, naam)).toUpperCase();
+      if (w === 'JA') return true;
+      if (w === 'NEE') return false;
+      fout(loc(naam), w ? `"${naam}" moet JA of NEE zijn (gevonden: "${w}").` : `"${naam}" is leeg.`);
+      return false;
+    };
+    const residentieel = jaNee('Residentieel');
+    const actief = jaNee('Actief');
+
+    const data = [];
+    for (const dk of datumKolommen) {
+      const ruw = rij[dk.k];
+      if (tekstVan(ruw) === '') continue;
+      const d = naarDatum(ruw);
+      if (!d) fout(`Activiteiten ${kolomLetter(dk.k)}${rnr}`, `"${tekstVan(ruw)}" is geen geldige datum.`);
+      else if (data.includes(d)) waarschuw(`Activiteiten ${kolomLetter(dk.k)}${rnr}`, `Datum ${d} staat dubbel; wordt maar één keer opgenomen.`);
+      else data.push(d);
+    }
+    data.sort();
+
+    if (cursus) cursus.activiteiten.push({ rij: rnr, gemeente, plaats: plaatsCode(gemeente), data, residentieel, actief });
+  });
+
+  // ---- Sorteren, sleutels toekennen, uniciteit ----
+  const nl = new Intl.Collator('nl', { sensitivity: 'base', numeric: true });
+  for (const c of cursussen) {
+    if (!c.activiteiten.length) waarschuw(`Cursussen rij ${c.rij}`, `Cursus "${c.titel}" heeft geen activiteiten.`);
+    c.activiteiten.sort((a, b) =>
+      nl.compare(a.gemeente, b.gemeente) || a.plaats.localeCompare(b.plaats) ||
+      (a.data[0] || '9999').localeCompare(b.data[0] || '9999') || a.rij - b.rij);
+    const teller = {};
+    const gezien = new Map();
+    for (const a of c.activiteiten) {
+      teller[a.plaats] = (teller[a.plaats] || 0) + 1;
+      a.sleutel = `${c.sleutel}_${a.plaats}_${String(teller[a.plaats]).padStart(2, '0')}`;
+      if (gezien.has(a.sleutel))
+        fout(`Activiteiten rijen ${gezien.get(a.sleutel)}, ${a.rij}`, `Dubbele activiteitssleutel "${a.sleutel}" binnen cursus "${c.titel}".`);
+      else gezien.set(a.sleutel, a.rij);
+      a.obj = { uniekeSleutel: { sleutel: a.sleutel }, locatie: { gemeente: a.gemeente } };
+      if (a.data.length) a.obj.data = a.data.map(d => ({ localDate: d }));
+      a.obj.residentieel = a.residentieel;
+      a.obj.actief = a.actief;
+    }
+  }
+
+  if (!cursussen.length) fout('Cursussen', 'Er staan geen cursussen in het blad.');
+
+  const resultaat = { fouten, waarschuwingen,
+    aantalCursussen: cursussen.length,
+    aantalActiviteiten: cursussen.reduce((n, c) => n + c.activiteiten.length, 0) };
+  if (!fouten.length) resultaat.json = cursussen.map(c => c.maak());
+  return resultaat;
+}
+
+/* ================= Interface ================= */
+
+const $ = id => document.getElementById(id);
+let huidigeJson = '';
+
+// Dezelfde melding in opeenvolgende rijen van dezelfde kolom samenvoegen: "Activiteiten A19–A35"
+function groepeer(meldingen) {
+  const uit = [];
+  for (const m of meldingen) {
+    const p = m.loc.match(/^(\S+) ([A-Z]+)(\d+)$/);
+    const vorige = uit[uit.length - 1];
+    if (p && vorige && vorige.tekst === m.tekst && vorige.blad === p[1] && vorige.kol === p[2] && vorige.tot === +p[3] - 1) {
+      vorige.tot = +p[3];
+      vorige.loc = `${p[1]} ${p[2]}${vorige.van}–${p[2]}${vorige.tot}`;
+    } else if (p) uit.push({ loc: m.loc, tekst: m.tekst, blad: p[1], kol: p[2], van: +p[3], tot: +p[3] });
+    else uit.push({ ...m });
+  }
+  return uit;
+}
+
+function toon(res, bestandsnaam) {
+  $('resultaat').classList.remove('hidden');
+  const ok = !res.fouten.length;
+  $('status').className = 'status ' + (ok ? 'ok' : 'err');
+  $('status').textContent = ok
+    ? `JSON aangemaakt uit ${bestandsnaam}` + (res.waarschuwingen.length ? ` (${res.waarschuwingen.length} waarschuwing(en))` : '')
+    : `${res.fouten.length} fout(en) gevonden: er is geen JSON gemaakt. Pas de Excel aan en laad hem opnieuw.`;
+
+  $('stats').innerHTML = '';
+  const stat = (n, label) => { const d = document.createElement('div'); d.className = 'stat'; d.innerHTML = `<b></b><span></span>`;
+    d.querySelector('b').textContent = n; d.querySelector('span').textContent = label; $('stats').appendChild(d); };
+  if (res.aantalCursussen !== undefined) { stat(res.aantalCursussen, 'cursussen'); stat(res.aantalActiviteiten, 'activiteiten'); }
+  stat(res.fouten.length, 'fouten'); stat(res.waarschuwingen.length, 'waarschuwingen');
+
+  const ul = $('meldingen'); ul.innerHTML = '';
+  for (const [lijst, cls] of [[res.fouten, 'err'], [res.waarschuwingen, 'warn']]) {
+    for (const m of groepeer(lijst)) {
+      const li = document.createElement('li'); li.className = cls;
+      const s = document.createElement('span'); s.className = 'loc'; s.textContent = m.loc + ':';
+      li.append(s, document.createTextNode(m.tekst)); ul.appendChild(li);
+    }
+  }
+
+  if (ok) {
+    huidigeJson = JSON.stringify(res.json, null, 2);
+    $('json').textContent = huidigeJson;
+    $('uitvoer').classList.remove('hidden');
+  } else {
+    huidigeJson = '';
+    $('uitvoer').classList.add('hidden');
+  }
+}
+
+async function verwerk(bestand) {
+  $('bestandsnaam').textContent = bestand.name;
+  try {
+    if (typeof DecompressionStream === 'undefined')
+      throw new Error('Deze browser is te oud. Open dit bestand in een recente versie van Microsoft Edge of Google Chrome.');
+    const bladen = await leesWerkmap(await bestand.arrayBuffer());
+    toon(zetOm(bladen), bestand.name);
+  } catch (e) {
+    toon({ fouten: [{ loc: 'Bestand', tekst: e.message }], waarschuwingen: [] }, bestand.name);
+  }
+}
+
+if (typeof document !== 'undefined' && $('drop')) {
+  const drop = $('drop');
+  $('bestand').addEventListener('change', e => { if (e.target.files[0]) verwerk(e.target.files[0]); e.target.value = ''; });
+  ['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('over'); }));
+  ['dragleave', 'drop'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove('over'); }));
+  drop.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f) verwerk(f); });
+
+  $('download').addEventListener('click', () => {
+    const url = URL.createObjectURL(new Blob([huidigeJson], { type: 'application/json' }));
+    const a = document.createElement('a'); a.href = url; a.download = 'Cursussen.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  $('kopieer').addEventListener('click', async () => {
+    const knop = $('kopieer');
+    try { await navigator.clipboard.writeText(huidigeJson); }
+    catch {
+      const ta = document.createElement('textarea'); ta.value = huidigeJson; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); ta.remove();
+    }
+    knop.textContent = 'Gekopieerd ✓';
+    setTimeout(() => knop.textContent = 'Kopiëren', 1500);
+  });
+}
+</script>
+</body>
+</html>
