@@ -239,6 +239,9 @@ function naarDatum(v) {
   return d.toISOString().slice(0, 10);
 }
 
+// "yyyy-mm-dd" -> "dd/mm/yyyy" voor meldingen aan de gebruiker
+const toonDatum = iso => iso.split('-').reverse().join('/');
+
 /* ================= Omzetting ================= */
 
 const VERPLICHTE_LIJSTEN = ['Taal', 'Statuut', 'JaNee', 'Verlofstelsel', 'Mandaat', 'Regio'];
@@ -448,7 +451,7 @@ function zetOm(bladen) {
       if (tekstVan(ruw) === '') continue;
       const d = naarDatum(ruw);
       if (!d) fout(`Activiteiten ${kolomLetter(dk.k)}${rnr}`, `"${tekstVan(ruw)}" is geen geldige datum.`);
-      else if (data.includes(d)) waarschuw(`Activiteiten ${kolomLetter(dk.k)}${rnr}`, `Datum ${d} staat dubbel; wordt maar één keer opgenomen.`);
+      else if (data.includes(d)) waarschuw(`Activiteiten ${kolomLetter(dk.k)}${rnr}`, `Datum ${toonDatum(d)} staat dubbel; wordt maar één keer opgenomen.`);
       else data.push(d);
     }
     data.sort();

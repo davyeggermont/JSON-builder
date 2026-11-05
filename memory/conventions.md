@@ -11,3 +11,6 @@ One rule per bullet, grouped by area. Update a rule in place when it changes; do
 ## Language
 - User-facing text (README, UI, error messages, Excel) is in Dutch. *Why:* end users are Dutch-speaking.
   (Observed from the repo; confirm with the user.)
+
+## Dates
+- Format user-facing dates as dd/mm/yyyy, always.
